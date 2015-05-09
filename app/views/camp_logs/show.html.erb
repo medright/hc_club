@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Registration:</strong>
+  <%= @camp_log.registration_id %>
+</p>
+
+<p>
+  <strong>Log:</strong>
+  <%= @camp_log.log %>
+</p>
+
+<p>
+  <strong>Picture:</strong>
+  <%= @camp_log.picture %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @camp_log.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_camp_log_path(@camp_log) %> |
+<%= link_to 'Back', camp_logs_path %>

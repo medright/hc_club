@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Camp Logs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Registration</th>
+      <th>Log</th>
+      <th>Picture</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @camp_logs.each do |camp_log| %>
+      <tr>
+        <td><%= camp_log.registration_id %></td>
+        <td><%= camp_log.log %></td>
+        <td><%= camp_log.picture %></td>
+        <td><%= camp_log.user_id %></td>
+        <td><%= link_to 'Show', camp_log %></td>
+        <td><%= link_to 'Edit', edit_camp_log_path(camp_log) %></td>
+        <td><%= link_to 'Destroy', camp_log, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Camp log', new_camp_log_path %>
